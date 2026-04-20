@@ -36,7 +36,7 @@ export function App() {
       </main>
 
       <footer class={styles.siteFooter}>
-        <p>{t.app.footer}</p>
+        <p>© {new Date().getFullYear()} {t.app.footer}</p>
       </footer>
     </div>
   )
