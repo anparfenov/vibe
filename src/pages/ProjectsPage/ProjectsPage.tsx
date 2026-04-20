@@ -1,4 +1,4 @@
-import './ProjectsPage.css'
+import styles from './ProjectsPage.module.css'
 
 type Project = {
   name: string
@@ -29,8 +29,8 @@ const projects: Project[] = [
 
 export function ProjectsPage() {
   return (
-    <section class="stack">
-      <article class="panel">
+    <section class={styles.stack}>
+      <article class={styles.panel}>
         <h1>My Projects</h1>
         <p>
           A shortlist of projects that demonstrate scope, impact, and craft.
@@ -38,12 +38,14 @@ export function ProjectsPage() {
       </article>
 
       {projects.map((project) => (
-        <article class="panel" key={project.name}>
+        <article class={styles.panel} key={project.name}>
           <h2>{project.name}</h2>
           <p>{project.summary}</p>
-          <ul class="pill-list">
+          <ul class={styles.pillList}>
             {project.stack.map((tech) => (
-              <li key={tech}>{tech}</li>
+              <li class={styles.listElement} key={tech}>
+                {tech}
+              </li>
             ))}
           </ul>
         </article>
