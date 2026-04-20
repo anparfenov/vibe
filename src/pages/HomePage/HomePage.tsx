@@ -1,23 +1,23 @@
+import { useTranslations } from '../../i18n/i18n'
 import styles from './HomePage.module.css'
 
 export function HomePage() {
+  const t = useTranslations()
+
   return (
     <section class={styles.stack}>
       <article class={styles.panel}>
-        <h1>Hi, I am Andrey.</h1>
-        <p>
-          I build products and tools that are fast, useful, and thoughtful. This
-          space is my digital business card with a compact overview of who I am
-          and what I build.
-        </p>
+        <h1>{t.homePage.heading}</h1>
+        <p>{t.homePage.intro}</p>
       </article>
       <article class={styles.panel}>
-        <h2>What you can find here</h2>
+        <h2>{t.homePage.findHereHeading}</h2>
         <ul class={styles.pillList}>
-          <li class={styles.listElement}>Career highlights</li>
-          <li class={styles.listElement}>Technical strengths</li>
-          <li class={styles.listElement}>Selected projects</li>
-          <li class={styles.listElement}>Contact direction</li>
+          {t.homePage.findHereItems.map((item) => (
+            <li class={styles.listElement} key={item}>
+              {item}
+            </li>
+          ))}
         </ul>
       </article>
     </section>

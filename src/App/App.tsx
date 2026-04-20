@@ -1,32 +1,27 @@
 import { Link, Route, Switch } from 'wouter-preact'
+import { useTranslations } from '../i18n/i18n'
 import { CvPage } from '../pages/CvPage/CvPage'
 import { HomePage } from '../pages/HomePage/HomePage'
+import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage'
 import { ProjectsPage } from '../pages/ProjectsPage/ProjectsPage'
 import styles from './App.module.css'
 
-function NotFoundPage() {
-  return (
-    <section class={styles.panel}>
-      <h1>Page not found</h1>
-      <p>That page does not exist. Use the navigation to get back on track.</p>
-    </section>
-  )
-}
-
 export function App() {
+  const t = useTranslations()
+
   return (
     <div class={styles.siteShell}>
       <header class={styles.siteHeader}>
-        <p class={styles.eyebrow}>Personal Site</p>
+        <p class={styles.eyebrow}>{t.app.eyebrow}</p>
         <nav class={styles.siteNav} aria-label="Primary">
           <Link class={styles.navLink} href="/">
-            Home
+            {t.nav.home}
           </Link>
           <Link class={styles.navLink} href="/cv">
-            CV
+            {t.nav.cv}
           </Link>
           <Link class={styles.navLink} href="/projects">
-            My Projects
+            {t.nav.projects}
           </Link>
         </nav>
       </header>
@@ -41,7 +36,7 @@ export function App() {
       </main>
 
       <footer class={styles.siteFooter}>
-        <p>Built with Preact, Vite, pnpm and Biome.</p>
+        <p>{t.app.footer}</p>
       </footer>
     </div>
   )

@@ -1,0 +1,63 @@
+export const en = {
+    app: {
+        eyebrow: 'Personal Site',
+        footer: 'Built with Preact, Vite, pnpm and Biome.',
+    },
+    nav: {
+        home: 'Home',
+        cv: 'CV',
+        projects: 'My Projects',
+    },
+    homePage: {
+        heading: 'Hi, I am Andrey.',
+        intro:
+            'I build products and tools that are fast, useful, and thoughtful. This space is my digital business card with a compact overview of who I am and what I build.',
+        findHereHeading: 'What you can find here',
+        findHereItems: [
+            'Career highlights',
+            'Technical strengths',
+            'Selected projects',
+            'Contact direction',
+        ],
+    },
+    cvPage: {
+        intro:
+            'Engineer focused on shipping reliable experiences with clean UX and maintainable code.',
+        highlightsHeading: 'Core highlights',
+        highlights: [
+            'Product engineering across frontend and backend',
+            'Performance-first architecture and tooling',
+            'Clear communication with cross-functional teams',
+        ],
+        skillsHeading: 'Skills',
+        skills: ['TypeScript', 'Preact', 'Node.js', 'PostgreSQL', 'CI/CD'],
+    },
+    projectsPage: {
+        heading: 'My Projects',
+        intro: 'A shortlist of projects that demonstrate scope, impact, and craft.',
+        projects: [
+            {
+                name: 'Realtime Analytics Dashboard',
+                summary:
+                    'A responsive dashboard for monitoring product events and conversion funnels in near real time.',
+                stack: ['TypeScript', 'Preact', 'WebSocket'],
+            },
+            {
+                name: 'Developer Workflow CLI',
+                summary:
+                    'A command line tool that standardized project bootstrap, quality checks, and release automation.',
+                stack: ['Node.js', 'TypeScript', 'GitHub Actions'],
+            },
+            {
+                name: 'Knowledge Base Search',
+                summary:
+                    'An internal semantic search tool to make technical documentation easier to discover and maintain.',
+                stack: ['PostgreSQL', 'API Design', 'UX Writing'],
+            },
+        ],
+    },
+    notFoundPage: {
+        heading: 'Page not found',
+        body: 'That page does not exist. Use the navigation to get back on track.',
+    },
+}

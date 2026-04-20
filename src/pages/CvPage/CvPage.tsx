@@ -1,36 +1,30 @@
+import { useTranslations } from '../../i18n/i18n'
 import styles from './CvPage.module.css'
 
-const highlights = [
-  'Product engineering across frontend and backend',
-  'Performance-first architecture and tooling',
-  'Clear communication with cross-functional teams',
-]
-
 export function CvPage() {
+  const t = useTranslations()
+
   return (
     <section class={styles.stack}>
       <article class={styles.panel}>
-        <p>
-          Engineer focused on shipping reliable experiences with clean UX and
-          maintainable code.
-        </p>
+        <p>{t.cvPage.intro}</p>
       </article>
       <article class={styles.panel}>
-        <h2>Core highlights</h2>
+        <h2>{t.cvPage.highlightsHeading}</h2>
         <ul>
-          {highlights.map((item) => (
+          {t.cvPage.highlights.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </article>
       <article class={styles.panel}>
-        <h2>Skills</h2>
+        <h2>{t.cvPage.skillsHeading}</h2>
         <ul class={styles.pillList}>
-          <li class={styles.listElement}>TypeScript</li>
-          <li class={styles.listElement}>Preact</li>
-          <li class={styles.listElement}>Node.js</li>
-          <li class={styles.listElement}>PostgreSQL</li>
-          <li class={styles.listElement}>CI/CD</li>
+          {t.cvPage.skills.map((skill) => (
+            <li class={styles.listElement} key={skill}>
+              {skill}
+            </li>
+          ))}
         </ul>
       </article>
     </section>
