@@ -1,9 +1,10 @@
 import { createContext } from "preact"
 import { useContext } from "preact/hooks"
 import type { ComponentChildren } from "preact"
-import { en } from "./locales/en"
-
-export type Translations = typeof en
+import {
+  preactEn as en,
+  type PreactTranslations as Translations,
+} from "../../../shared/locales/preact.en"
 
 const I18nContext = createContext<Translations>(en)
 

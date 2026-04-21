@@ -2,10 +2,16 @@
   "name": "my-site-workspace",
   "private": true,
   "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "oxfmt": "^0.2.0",
+    "oxlint": "^0.18.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "vite-plugin-pwa": "^1.2.0",
+    "workbox-window": "^7.4.0"
+  },
   "scripts": {
-    "dev": "pnpm -C packages/my-site-preact dev",
-    "build": "pnpm -C packages/my-site-preact build",
-    "preview": "pnpm -C packages/my-site-preact preview",
     "lint": "pnpm -C packages/my-site-preact lint",
     "lint:fix": "pnpm -C packages/my-site-preact lint:fix",
     "format": "pnpm -C packages/my-site-preact format",

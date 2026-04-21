@@ -1,5 +1,8 @@
 import { inject } from "vue"
-import { en, type Translations } from "./locales/en"
+import {
+  vueEn as en,
+  type VueTranslations as Translations,
+} from "../../../shared/locales/vue.en"
 
 export const translationsKey = Symbol("translations")
 export const defaultTranslations = en
