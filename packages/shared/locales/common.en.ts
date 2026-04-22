@@ -21,12 +21,14 @@ export type Locale = {
         projects: string
     }
     homePage: {
+        title: string
         heading: string
         intro: string
         findHereHeading: string
         findHereItems: string[]
     }
     cvPage: {
+        title: string
         intro: string
         highlightsHeading: string
         highlights: string[]
@@ -34,11 +36,13 @@ export type Locale = {
         skills: string[]
     }
     projectsPage: {
+        title: string
         heading: string
         intro: string
         projects: LocaleProject[]
     }
     notFoundPage: {
+        title: string
         heading: string
         body: string
     }
@@ -56,6 +60,7 @@ export function createLocale(config: LocaleConfig): Locale {
             projects: 'My Projects',
         },
         homePage: {
+            title: 'Andrey Parfenov',
             heading: 'Hi, I am Andrey.',
             intro:
                 'I build products and tools that are fast, useful, and thoughtful. This space is my digital business card with a compact overview of who I am and what I build.',
@@ -68,6 +73,7 @@ export function createLocale(config: LocaleConfig): Locale {
             ],
         },
         cvPage: {
+            title: 'CV · Andrey Parfenov',
             intro:
                 'Engineer focused on shipping reliable experiences with clean UX and maintainable code.',
             highlightsHeading: 'Core highlights',
@@ -86,6 +92,7 @@ export function createLocale(config: LocaleConfig): Locale {
             ],
         },
         projectsPage: {
+            title: 'Projects · Andrey Parfenov',
             heading: 'My Projects',
             intro: 'A shortlist of projects that demonstrate scope, impact, and craft.',
             projects: [
@@ -110,6 +117,7 @@ export function createLocale(config: LocaleConfig): Locale {
             ],
         },
         notFoundPage: {
+            title: 'Not Found · Andrey Parfenov',
             heading: 'Page not found',
             body: 'That page does not exist. Use the navigation to get back on track.',
         },

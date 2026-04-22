@@ -2,8 +2,8 @@ import { render } from "preact"
 import { registerSW } from "virtual:pwa-register"
 import { App } from "./App/App"
 import { I18nProvider } from "./i18n/i18n"
-import "./styles/colors.css"
-import "./index.css"
+import "../../shared/styles/colors.css"
+import "../../shared/styles/index.css"
 
 const shouldRegisterServiceWorker = import.meta.env.VITE_ENABLE_SW !== "false"
 

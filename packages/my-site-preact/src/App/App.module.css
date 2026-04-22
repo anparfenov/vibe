@@ -21,12 +21,40 @@
   font-size: 0.95rem;
 }
 
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .eyebrow {
   margin: 0;
   font-size: 0.85rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-soft);
+}
+
+.windowBtn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--highlight-soft);
+  color: var(--text-strong);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.windowBtn:hover {
+  transform: translateY(-1px);
+  border-color: var(--highlight);
 }
 
 .siteNav {

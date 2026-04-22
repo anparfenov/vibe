@@ -1,8 +1,10 @@
+import { usePageTitle } from "../../hooks/usePageTitle"
 import { useTranslations } from "../../i18n/i18n"
 import styles from "./CvPage.module.css"
 
 export function CvPage() {
   const t = useTranslations()
+  usePageTitle(t.cvPage.title)
 
   return (
     <section class={styles.stack}>

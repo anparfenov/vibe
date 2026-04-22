@@ -1,10 +1,8 @@
-import { usePageTitle } from "../../hooks/usePageTitle"
 import { useTranslations } from "../../i18n/i18n"
 import styles from "./HomePage.module.css"
 
 export function HomePage() {
   const t = useTranslations()
-  usePageTitle(t.homePage.title)
 
   return (
     <section class={styles.stack}>

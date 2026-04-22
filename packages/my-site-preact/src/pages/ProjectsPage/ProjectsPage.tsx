@@ -1,8 +1,10 @@
+import { usePageTitle } from "../../hooks/usePageTitle"
 import { useTranslations } from "../../i18n/i18n"
 import styles from "./ProjectsPage.module.css"
 
 export function ProjectsPage() {
   const t = useTranslations()
+  usePageTitle(t.projectsPage.title)
 
   return (
     <section class={styles.stack}>
